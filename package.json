@@ -1,0 +1,24 @@
+{
+  "name": "mern-tutorial",
+  "version": "1.0.0",
+  "description": "app.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "keywords": [
+    "mern",
+    "react"
+  ],
+  "author": "tappik.code",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.16"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
