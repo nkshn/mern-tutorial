@@ -1,6 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHttp } from '../hooks/http.hook';
 
 export const AuthPage = () => {
+  const { loading, request } = useHttp();
+  const [form, setForm] = useState({
+    email: '',
+    password: '',
+  });
+
+  const changeHandler = (event) => {
+    setForm({ ...form, [event.target.name]: event.target.value });
+  };
+
+  const registerHandler = async () => {
+    try {
+      const data = await request('/api/auth/register', 'POST', { ...from });
+      console.log('Data: ' + data);
+    } catch (error) {}
+  };
+
   return (
     <div className="row">
       <div className="col s6 offset-s3">
