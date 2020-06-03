@@ -56,7 +56,7 @@ router.post(
   async (request, response) => {
     try {
       const errors = validationResult(request);
-      if (!error.isEmpty()) {
+      if (!errors.isEmpty()) {
         return response.status(400).json({
           errors: errors.array(),
           message: 'Некорректные данные при входе в систему',
