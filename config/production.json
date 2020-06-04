@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "jwtSecret": "tappik code mern",
+  "mongoUri": "mongodb+srv://vova:Ut14UnOkhkhKB03i@cluster0-ndwxy.azure.mongodb.net/app?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
+}
