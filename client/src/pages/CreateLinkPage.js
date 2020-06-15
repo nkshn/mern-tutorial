@@ -24,7 +24,7 @@ export const CreateLinkPage = () => {
           }
         );
         history.push(`/detail/${data.link._id}`);
-      } catch (error) {}
+      } catch (error) { }
     }
   };
 
@@ -33,14 +33,14 @@ export const CreateLinkPage = () => {
       <div className="col s8 offset-s2" style={{ paddingTop: '2rem' }}>
         <div className="input-field">
           <input
-            placeholder="Вставте сылку"
+            placeholder="Enter Link"
             id="link"
             type="text"
             value={link}
             onChange={(e) => setLink(e.target.value)}
             onKeyPress={pressHandler}
           />
-          <label htmlFor="link">Вставте сылку</label>
+          <label htmlFor="link">Enter Link</label>
         </div>
       </div>
     </div>

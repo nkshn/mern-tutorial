@@ -29,29 +29,29 @@ export const AuthPage = () => {
     try {
       const data = await request('/api/auth/register', 'POST', { ...form });
       message(data.message);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   const loginHandler = async () => {
     try {
       const data = await request('/api/auth/login', 'POST', { ...form });
       auth.login(data.token, data.userId);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   return (
     <div className="row">
       <div className="col s6 offset-s3">
-        <h1 className="">Сократи силку</h1>
+        <h1 className="">Shorty Linky</h1>
         <div className="card blue darken-1">
           <div className="card-content white-text">
             <span className="card-title" style={{ marginBottom: 30 }}>
-              Авторизация
+              Authorization
             </span>
             <div>
               <div className="input-field">
                 <input
-                  placeholder="Введите email"
+                  placeholder="Input email"
                   id="email"
                   type="text"
                   name="email"
@@ -65,7 +65,7 @@ export const AuthPage = () => {
             <div>
               <div className="input-field">
                 <input
-                  placeholder="Введите пароль"
+                  placeholder="Input password"
                   id="password"
                   type="password"
                   name="password"
@@ -73,7 +73,7 @@ export const AuthPage = () => {
                   className="yellow-input"
                   onChange={changeHandler}
                 />
-                <label htmlFor="password">Пароль</label>
+                <label htmlFor="password">Password</label>
               </div>
             </div>
           </div>
@@ -84,14 +84,14 @@ export const AuthPage = () => {
               onClick={registerHandler}
               disabled={loading}
             >
-              Регистрация
+              Sign Up
             </button>
             <button
               className="btn yellow darken-4"
               onClick={loginHandler}
               disabled={loading}
             >
-              Войти
+              Sign In
             </button>
           </div>
         </div>
